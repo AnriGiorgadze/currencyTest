@@ -1,0 +1,176 @@
+{
+  "currencyList": [
+    {
+      "id": "ABC:GEL",
+      "ccyFrom": "ABC",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 1.43,
+      "sell": 1.67
+    },
+    {
+      "id": "AED:GEL",
+      "ccyFrom": "AED",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 0.664,
+      "sell": 0.764
+    },
+    {
+      "id": "AFN:GEL",
+      "ccyFrom": "AFN",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 0.007,
+      "sell": 0.008
+    },
+    {
+      "id": "AMD:GEL",
+      "ccyFrom": "AMD",
+      "ccyTo": "GEL",
+      "multiplier": 10,
+      "buy": 0.043,
+      "sell": 0.073
+    },
+    {
+      "id": "AOA:GEL",
+      "ccyFrom": "AOA",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 1.99,
+      "sell": 2.11
+    },
+    {
+      "id": "AVD:GEL",
+      "ccyFrom": "AVD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 1.599,
+      "sell": 1.779
+    },
+    {
+      "id": "AZN:GEL",
+      "ccyFrom": "AZN",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 1.288,
+      "sell": 1.688
+    },
+    {
+      "id": "BGN:GEL",
+      "ccyFrom": "BGN",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 1.129,
+      "sell": 1.629
+    },
+    {
+      "id": "BYB:GEL",
+      "ccyFrom": "BYB",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 0.88,
+      "sell": 1.51
+    },
+    {
+      "id": "CAD:GEL",
+      "ccyFrom": "CAD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 1.829,
+      "sell": 2.029
+    }
+  ],
+  "historicalData": [
+    {
+      "id": "2023-05-24T09:47:40.353Z:USD:GEL",
+      "dateTime": "2023-05-24T09:47:40.3530000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.52,
+      "sell": 2.62
+    },
+    {
+      "id": "2023-05-24T11:27:41.810Z:USD:GEL",
+      "dateTime": "2023-05-24T11:27:41.8100000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.525,
+      "sell": 2.625
+    },
+    {
+      "id": "2023-05-24T12:08:42.417Z:USD:GEL",
+      "dateTime": "2023-05-24T12:08:42.4170000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.53,
+      "sell": 2.63
+    },
+    {
+      "id": "2023-05-24T12:21:42.647Z:USD:GEL",
+      "dateTime": "2023-05-24T12:21:42.6470000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.535,
+      "sell": 2.635
+    },
+    {
+      "id": "2023-05-24T12:32:42.710Z:USD:GEL",
+      "dateTime": "2023-05-24T12:32:42.7100000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.54,
+      "sell": 2.64
+    },
+    {
+      "id": "2023-05-24T12:47:42.967Z:USD:GEL",
+      "dateTime": "2023-05-24T12:47:42.9670000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.545,
+      "sell": 2.645
+    },
+    {
+      "id": "2023-05-24T14:14:44.253Z:USD:GEL",
+      "dateTime": "2023-05-24T14:14:44.2530000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.55,
+      "sell": 2.65
+    },
+    {
+      "id": "2023-05-24T14:37:44.523Z:USD:GEL",
+      "dateTime": "2023-05-24T14:37:44.5230000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.54,
+      "sell": 2.64
+    },
+    {
+      "id": "2023-05-24T15:20:45.143Z:USD:GEL",
+      "dateTime": "2023-05-24T15:20:45.1430000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.535,
+      "sell": 2.635
+    },
+    {
+      "id": "2023-05-24T16:42:46.763Z:USD:GEL",
+      "dateTime": "2023-05-24T16:42:46.7630000+04:00",
+      "ccyFrom": "USD",
+      "ccyTo": "GEL",
+      "multiplier": 1,
+      "buy": 2.53,
+      "sell": 2.63
+    }
+  ]
+}
