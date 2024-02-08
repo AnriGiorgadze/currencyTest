@@ -120,8 +120,7 @@
             </div>
         </div>
     </div>
-    <a id="downloadButton" class="tbc-app-banner__download" href="https://tbcbank.onelink.me/YiId/0j35efwl">Get</a>
-    <!-- <div id="closeButton" class="tbc-app-banner__close">X</div> -->
+    <div id="downloadButton" class="tbc-app-banner__download">Get</div>
 </div>
 
 <script>
@@ -181,19 +180,11 @@
 
     // Function to handle download button click
     function handleDownloadClick() {
-        // Redirect to the appropriate app store
-        if (isIOS()) {
-            window.location.href = 'https://apps.apple.com/';
-        } else {
-            window.location.href = 'https://play.google.com/';
-        }
-    }
-
-    // Function to handle close button click
-    function handleCloseClick() {
         hideBanner();
         // Set a cookie to remember that the user closed the banner
         setCookie('appBannerClosed', 'true', 1); // Cookie expires in 1 day
+
+        window.location.hash = 'https://tbcbank.onelink.me/YiId/0j35efwl';
     }
 
     // Check if the banner should be displayed
@@ -206,7 +197,6 @@
 
     // Add event listeners
     document.getElementById('downloadButton').addEventListener('click', handleDownloadClick);
-    // document.getElementById('closeButton').addEventListener('click', handleCloseClick);
 </script>
 
 </body>
