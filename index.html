@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Download Button</title>
-</head>
-<body></body>
-
-    
-<body></body>
-
-<script>
-        
     (function () {
         var cookieKey = 'tbc-app-banner-closed';
 
@@ -230,20 +216,16 @@
                 renderHTML();
                 injectStyles();
                 showBanner();
+
+                // Add event listeners
+                document.getElementById('tbc-app-banner-download').addEventListener('click', handleDownloadClick);
             }
 
             console.log("isIOS - ", isIOS() , 'getIOSVersion - ', getIOSVersion());
             console.log("isAndroid - ", isAndroid() , 'getAndroidVersion - ', getAndroidVersion());
 
-            // Add event listeners
-            document.getElementById('tbc-app-banner-download').addEventListener('click', handleDownloadClick);
         }
 
         start();
 
     })();
-
-</script>
-
-</html>
-
