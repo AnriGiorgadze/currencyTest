@@ -23,7 +23,7 @@
         // Function to get iOS version
         function getIOSVersion() {
             var match = navigator.userAgent.match(/OS (\d+)_(\d+)_?(\d+)?/);
-            return match ? parseInt(match[1], 10) : 0;
+            return match ? parseFloat(match[1] + '.' + match[2]) : 0;
         }
 
         // Function to check if the device is Android
@@ -50,15 +50,15 @@
 
         // Function to check if the banner should be displayed
         function shouldDisplayBanner() {
-            // // Check if the device is iOS and the version is more than or equal to 15
-            // if (isIOS()) {
-            //     return getIOSVersion() >= 15;
-            // }
-            // // Check if the device is Android and the version is greater than or equal to 6
-            // else if (isAndroid()) {
-            //     return getAndroidVersion() >= 6;
-            // }
-            return true;
+            // Check if the device is iOS and the version is more than or equal to 15
+            if (isIOS()) {
+                return getIOSVersion() >= 15.1;
+            }
+            // Check if the device is Android and the version is more than or equal to 6
+            else if (isAndroid()) {
+                return getAndroidVersion() >= 6;
+            }
+            return false;
         }
 
         // Function to show the banner
