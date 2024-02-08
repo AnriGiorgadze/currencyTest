@@ -8,7 +8,7 @@
 <body>
 
     <!-- // FOR DEV ONLY START -->
-        <button id="dev-reset-button">Reset cookies</button>
+        <button id="dev-reset-button">Reset cookies and refresh</button>
     <!-- // FOR DEV ONLY END -->
 
 </body>
@@ -232,7 +232,7 @@
                 // Reset cookie
                 function resetCookie() {
                     document.cookie = `${cookieKey}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-                    showBanner();
+                    window.location.reload();
                 }
 
                 document.getElementById('dev-reset-button').addEventListener('click', resetCookie);
