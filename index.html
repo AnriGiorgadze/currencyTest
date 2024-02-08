@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Download Button</title>
 </head>
-<body></body>
+<body>
+
+    <!-- // FOR DEV ONLY START -->
+        <button id="dev-reset-button">Reset cookies</button>
+    <!-- // FOR DEV ONLY END -->
+
+</body>
 
     <script>
             
@@ -217,6 +223,22 @@
             
             // App start
             function start() {
+
+                // FOR DEV ONLY START ======================================
+
+                console.log("isIOS - ", isIOS() , 'getIOSVersion - ', getIOSVersion());
+                console.log("isAndroid - ", isAndroid() , 'getAndroidVersion - ', getAndroidVersion());
+
+                // Reset cookie
+                function resetCookie() {
+                    document.cookie = `${cookieKey}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+                    showBanner();
+                }
+
+                document.getElementById('dev-reset-button').addEventListener('click', resetCookie);
+
+                // FOR DEV ONLY END   ======================================
+
                 // Check if the cookie exists, if yes, don't show the banner
                 if (cookieExists(cookieKey)) {
                     return;
@@ -231,10 +253,6 @@
                     // Add event listeners
                     document.getElementById('tbc-app-banner-download').addEventListener('click', handleDownloadClick);
                 }
-
-                console.log("isIOS - ", isIOS() , 'getIOSVersion - ', getIOSVersion());
-                console.log("isAndroid - ", isAndroid() , 'getAndroidVersion - ', getAndroidVersion());
-
             }
 
             start();
