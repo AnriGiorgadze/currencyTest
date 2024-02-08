@@ -4,112 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Download Button</title>
-    <style>
-        /* Add your styles for the banner here */
-        .tbc-app-banner {
-                display: none;
-                align-items: center;
-                justify-content: space-between;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-
-                background: #29ABE2;
-                color: #fff;
-                height: 70px;
-
-                padding-right: 30px;
-                padding-left: 23px;
-        }
-
-        .tbc-app-banner__info {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-
-        .tbc-app-banner__image {
-            width: 49px;
-            height: 49px;
-            border-radius: 10px; /* TODO:// Check this */
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-right: 11px;
-        }
-
-        .tbc-app-banner__image svg {
-            width: 35px;
-            height: 37px;
-        }
-
-        .tbc-app-banner__other {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .tbc-app-banner__title {
-            font-family: 'tbc_din_mtavrulimedium' !important;
-            margin-bottom: 4px; /* TODO:// Check this */
-        }
-
-        .tbc-app-banner__title span {
-            font-weight: 700;
-            font-family: 'tbc_din_mtavrulibold' !important;
-        }
-
-        .tbc-app-banner__close {
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            cursor: pointer;
-        }
-
-        .tbc-app-banner__rating {
-            display: flex;
-            align-items: center;
-        }
-
-        .tbc-app-banner__rating svg {
-            height: 11px;
-        }
-
-        .tbc-app-banner__rating span {
-            font-family: 'tbc_din_mtavrulimedium' !important;
-            margin-left: 4px;
-            opacity: 0.8;
-        }
-        
-        .tbc-app-banner__download {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 38px;
-            padding: 0 28px;
-            border-radius: 30px; /* TODO:// Check this */
-            color: #262B2E;
-            background: #fff;
-
-            font-weight: 700;
-            font-family: 'tbc_din_mtavrulibold' !important;
-
-            text-decoration: none;
-        }
-
-        .tbc-app-banner__download:hover {
-            opacity: 0.9;
-        }
-    </style>
 </head>
-<body>
+<body></body>
 
-<!-- App Download Banner -->
-<div id="tbc-app-banner-root"></div>
+    
+<body></body>
 
 <script>
+        
     (function () {
         var cookieKey = 'tbc-app-banner-closed';
 
@@ -168,7 +70,7 @@
         // Function to hide the banner
         function hideBanner() {
             var banner = document.getElementById('tbc-app-banner');
-            banner.style.display = 'flex';
+            banner.style.display = 'none';
         }
 
         // Function to handle download button click
@@ -204,9 +106,119 @@
                             <div id="tbc-app-banner-download" class="tbc-app-banner__download">Get</div>
                         </div>`;
 
-            document.getElementById('tbc-app-banner-root').innerHTML = html; 
+            document.body.insertAdjacentHTML('afterbegin', html);
+        }
+
+        // Inject main styles
+        function injectStyles() {
+            var styles = `
+                        .tbc-app-banner {
+                                display: none;
+                                align-items: center;
+                                justify-content: space-between;
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+
+                                background: #29ABE2;
+                                color: #fff;
+                                height: 70px;
+
+                                padding-right: 30px;
+                                padding-left: 23px;
+                                z-index: 99999; /* TODO:// Sorry for this :D */
+                        }
+
+                        .tbc-app-banner__info {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                        }
+
+                        .tbc-app-banner__image {
+                            width: 49px;
+                            height: 49px;
+                            border-radius: 10px; /* TODO:// Check this */
+                            background: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                            margin-right: 11px;
+                        }
+
+                        .tbc-app-banner__image svg {
+                            width: 35px;
+                            height: 37px;
+                        }
+
+                        .tbc-app-banner__other {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .tbc-app-banner__title {
+                            font-family: 'tbc_din_mtavrulimedium' !important;
+                            margin-bottom: 4px; /* TODO:// Check this */
+                        }
+
+                        .tbc-app-banner__title span {
+                            font-weight: 700;
+                            font-family: 'tbc_din_mtavrulibold' !important;
+                        }
+
+                        .tbc-app-banner__close {
+                            position: absolute;
+                            top: 5px;
+                            right: 10px;
+                            cursor: pointer;
+                        }
+
+                        .tbc-app-banner__rating {
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        .tbc-app-banner__rating svg {
+                            height: 11px;
+                        }
+
+                        .tbc-app-banner__rating span {
+                            font-family: 'tbc_din_mtavrulimedium' !important;
+                            margin-left: 4px;
+                            opacity: 0.8;
+                        }
+                        
+                        .tbc-app-banner__download {
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 38px;
+                            padding: 0 28px;
+                            border-radius: 30px; /* TODO:// Check this */
+                            color: #262B2E;
+                            background: #fff;
+
+                            font-weight: 700;
+                            font-family: 'tbc_din_mtavrulibold' !important;
+
+                            text-decoration: none;
+                        }
+
+                        .tbc-app-banner__download:hover {
+                            opacity: 0.9;
+                        }`;
+
+
+            var styleElement = document.createElement('style');
+            styleElement.type = 'text/css';
+            styleElement.appendChild(document.createTextNode(styles));
+            document.head.appendChild(styleElement);
         }
         
+        // App start
         function start() {
             // Check if the cookie exists, if yes, don't show the banner
             if (cookieExists(cookieKey)) {
@@ -216,6 +228,7 @@
             // Check if the banner should be displayed
             if (shouldDisplayBanner()) {
                 renderHTML();
+                injectStyles();
                 showBanner();
             }
 
@@ -229,8 +242,8 @@
         start();
 
     })();
+
 </script>
 
-</body>
 </html>
 
