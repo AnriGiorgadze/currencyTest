@@ -37,9 +37,9 @@
             }
 
             // Function to set a cookie
-            function setCookie(name, value, days) {
+            function setCookie(name, value, hours) {
                 var expires = new Date();
-                expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+                expires.setTime(expires.getTime() + hours * 60 * 60 * 1000); // Set expiration time to 1 hour
                 document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
             }
 
@@ -49,15 +49,15 @@
 
             // Function to check if the banner should be displayed
             function shouldDisplayBanner() {
-                // // Check if the device is iOS and the version is more than or equal to 15.1
-                // if (isIOS()) {
-                //     return getIOSVersion() >= 15.1;
-                // }
-                // // Check if the device is Android and the version is more than or equal to 6
-                // else if (isAndroid()) {
-                //     return getAndroidVersion() >= 6;
-                // }
-                return true;
+                // Check if the device is iOS and the version is more than or equal to 15.1
+                if (isIOS()) {
+                    return getIOSVersion() >= 15.1;
+                }
+                // Check if the device is Android and the version is more than or equal to 6
+                else if (isAndroid()) {
+                    return getAndroidVersion() >= 6;
+                }
+                return false;
             }
 
             // Function to show the banner
@@ -77,7 +77,7 @@
                 hideBanner();
                 // Set a cookie to remember that the user closed the banner
                 setCookie(cookieKey, 'true', 1); // Cookie expires in 1 day
-                window.location.replace('https://tbcbank.onelink.me/YiId/0j35efwl');
+                window.location.replace('https://tbcbank.onelink.me/YiId/ubq1t8bj');
             }
 
             // Function to handle close button click
@@ -251,6 +251,12 @@
 
                 // Check if the cookie exists, if yes, don't show the banner
                 if (cookieExists(cookieKey)) {
+                    return;
+                }
+
+                // Check if the banner already exists
+                var existingBanner = document.getElementById('tbc-app-banner');
+                if (existingBanner) {
                     return;
                 }
 
